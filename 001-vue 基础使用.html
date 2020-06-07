@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- 2. 引入 vue.js -->
+		<script src="./scripts/vue.js"></script>
+	</head>
+
+	<body>
+		<!-- 
+        插值表达式：
+          1. 创建页面结构
+          2. 引入 vue.js
+          3. 使用 vue 给提供的语法
+          4. 将数据展示到页面中
+    -->
+
+		<!-- 1. 创建页面结构 -->
+		<div id="box" class="box">
+			<!-- 4. 将数据展示到页面中 -->
+			<!-- 插值表达式 -->
+			<!-- 这些语法浏览器不会识别，Vue 会对这些代码进行编译和解析，生成 html 结构，渲染到页面中 -->
+			<p>{{ msg }}</p>
+
+			<!-- 可以在插值表达式中做简单的运算 -->
+			<p>{{ 3 + 6 }}</p>
+			<p>{{ 3 * 6 }}</p>
+			<p>{{ 2 === 2 ? true : false}}</p>
+
+			<!-- 在插值表达式中不能使用 if 和 for -->
+		</div>
+
+		<!-- 3. 使用 vue 给提供的语法 -->
+		<script>
+			var vm = new Vue({
+				el: '#box',
+				data: {
+					msg: 'Hello Vue',
+				},
+			})
+		</script>
+	</body>
+</html>
